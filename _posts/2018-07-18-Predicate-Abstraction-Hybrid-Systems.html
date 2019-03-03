@@ -1,0 +1,12 @@
+---
+layout: post
+title: Predicate Abstraction of Hybrid Systems and techniques
+permalink: /Predicate-Abstraction-Hybrid-Systems
+published: true
+images:
+  - url: /assets/
+---
+<p>Predicate-abstraction is a powerful technique for extracting finite-state models from infinite state systems. Let us first look at what predicate abstraction is and how it is helping us in model checking. An abstract state is a valid combination of truth values to the predicates, and hence corresponds to a polyhedral set of the concrete state space. In predicate abstraction, a finite set of predicates is defined over the concrete set of states. These predicates are used to construct a finite state abstration of the concrete system. The finite model can be used in place of the original system when performing model checking or deriving invariants. </p>
+  <p>An n-dimensional linear hybrid system is a tuple H= (X, L, X<sub>0</sub>, I, f, T). X is a convex polyhedron representing the hybrid state space. L is a finite set of locations. X<sub>0</sub> is a set of initial states. f: L->(R<sup>n</sup>->R<sup>n</sup>) assigns to each location a continuous vector field f(l) on x. T is a relation capturing discrete transition jumps between two discrete locations. </p>
+<p>In hardware domain, one of the most common abstraction techniques is localization reduction. This technique is an over-approximation of original circuit for reachability properties. This means if the abstraction satisfies the property, the property also holds on original circuit. The drawback is that when the model checking of the abstraction fails. It may produce a counterexample that maynot correspond to any concrete counterexample, which is known as a spurious counterexample. Several techniques to overcome this problem have been proposed, which make use of techniques like word level predicate abstraction.</p>
+In Progress..

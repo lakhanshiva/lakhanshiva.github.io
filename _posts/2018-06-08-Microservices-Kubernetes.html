@@ -1,0 +1,64 @@
+---
+layout: post
+title: Developing Microservices and Deploying using Kubernetes!
+permalink: /Developing-Microservices-Kubernetes
+published: true
+images:
+  - url: /assets/microservices.png
+---
+<p>Microservices are an important trend that have emerged in the enterprise often associated with the DevOps culture. These practices are designed to offer greater agility and operational efficiency. These came into being at companies like Amazon, Netflix, SoundCloud, Google, Facebook and several others which build software at scale.</p>
+<h2>What exactly are Microservices and why do we need them ? </h2>
+
+<p> Microservices is an architecture style, in which large complex software applications are composed of one or more services. The key advantage is that a microservice can be deployed independently of one another and are loosely coupled. Each of these microservices focuses on completing one task only and does that one task really well. Such a deployment allows us to make changes to a microservice without affecting other parts of the application, thereby saving us from the hassle of bringing the entire site down for maintenance. Also it came to the rescue by solving architectural bottleneck in software.</p>
+
+<h3>Some key points - </h3>
+<p>A microservice also needs to be treated like an application or a product. It should have its own source code management repository, and its own delivery pipeline for builds and deployment. Although the product owner might advocate the reuse of the microservice, reuse isn’t the only business motivation for microservices. There are others, such as localized optimizations to improve user interface (UI) responsiveness and to be able to respond to customer needs more rapidly.</p>
+
+<p>To describe some of the benefits of a microservices architecture, we should take a look at the context of most enterprise architectures and systems of architectures for application development. Over the years, most enterprise solutions have been designed and developed as large, complex, monolithic applications. There have been some reasonable approaches to decompose applications into layered
+architectures, such as model view controller (MVC). However, applications are still clumsy with regards to level of business functions that each of the applications are responsible for, therefore making them large and complex to manage.</p>
+
+<h2>How do we start building microservices ?</h2>
+
+<p>When beginning new applications, do not demand that microservices be included in them. Microservices attempt to solve problems of scale. When you start, your application is tiny. Even if it is not, it is just you or maybe you and a few more developers. You know it intimately, and can rewrite it over a weekend. The application is small enough that you can easily reason about it.</p>
+
+<p>Then we decompose monolithic applications into microservices. Many people came up with different methods for doing the decomposition, there is no 'best' I would say, but below are some methods:</p>
+
+<h3>Decompose by Business capability</h3>
+<ul>
+<li> Understanding the core components of the business (e.g., messaging, logging, user-interface, etc.)</li>
+<li> Build a service for each capability</li>
+</ul>
+  
+<h3>Decompose by locality</h3>
+<ul>
+<li> Sometimes you will find that there are some services that communicate more with one another compared to other services.</li>
+<li> Find the services that communicate intensely with one another and reason if the can be merged as one service.</li>
+<li> Keep services that communicate less in separate components</li>
+</ul>
+
+<h3>Decompose by Greed</h3>
+<ul>
+<li> Some components are more resource greedy than others, in fact, it would make a lot of sense to isolate the greedy components in their own services.</li>
+<li> Doing so, allows you to monitor the resource consumption more effectively and avoid overprovisioning resources.</li>
+</ul>
+
+<h2>What is Kubernetes ?</h2>
+
+<p>Kubernetes is an open source container orchestrator that was built by Google. It is a system for managing containerized applications (including microservices) across multiple hosts, providing basic mechanisms for deployment, maintenance, and scaling of applications.</p>
+
+<p>Naturally, developers enjoy working in smaller units and have expectations of better modularity than with a monolith. As with any architectural decision there are tradeoffs. In particular with microservices there are serious consequences for operations, who now have to handle an ecosystem of small services rather than a single well defined monolith.</p>
+<p><img src="/assets/microservices.png" /></p>
+
+<p><strong>Rapid Provisioning</strong>: You should be able to fire up a new server within a matter of hours. To do rapid provisioning you will need a lot of automation.</p>
+
+<p><strong>Basic Monitoring</strong>: With many loosely coupled services collaborating in production, things are bound to go wrong in ways that are difficult to detect in test environments. Therefore it is essential to have a monitoring regime in place to detect serious problems quickly. It's foremost to detect technical issues. If a sudden problem appears then you need to ensure you can quickly rollback.</p>
+
+<p><strong>Rapid Application Deployment</strong>: With many services to manage, you need to be able to quickly deploy them, both to test environments and to production. Usually this will involve a deployment pipeline that will execute in no more than a few hours. We look forward to fully automating this. There is a need for an important organizational shift - close collaboration between developers and operations - DevOps Culture. We need to fully embrace Continuous Delivery.</p>
+
+<p>&nbsp;Special thanks to Martin Fowler and other references 
+  <ul>
+    <li><a href="https://martinfowler.com"  target="_blank">Martin Fowler blog</a>.</li>
+    <li>IBM Redbook on Microservices </li>
+  </ul>
+</p>
+In Progress...

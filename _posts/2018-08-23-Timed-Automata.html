@@ -1,0 +1,18 @@
+---
+layout: post
+title: Timed Automata
+permalink: /Timed-Automata-Hybrid-Systems
+published: true
+images:
+  - url: /assets/timed_automaton.jpg
+---
+<p>Timed automata are a subclass of Hybrid Automata and were introduced by Alur and Dill [1] in 1994 to model real-time systems. They are very useful in formal verification because the problem of reachability analysis on timed automata is a "<i>decidable</i>" problem. In computability theory, a decidable problem is a decision problem that has an algorithm solution that returns either true or false, hence known as decidable. When we are interested in modeling timed systems that have real-time timing constraints this class of automata are incredibly useful. Some examples of timing constraints are - "<i>The airbag has to open within 5ms after a car crashes</i>" or "<i>The pacemaker needs to generate impulses within a real-time constraint of heart beat falling below a certain threshold</i>". A timed automaton is composed of a finite automaton and a set of clocks.</p>
+  <p>All the clock values increase at a same pace. Guards can be placed on the transitions of the automaton using which we can enable or disable that transition, thereby constraining the behaviour of the automaton and making it dependable on the clock values. Guards are nothing but clock values compared to integers and can either evaluate to true or false. We need to note here that the clocks can be reset.</p>
+<p>A timed automaton can be formally defined as a tuple H= (Q, &Sigma;, C, E, q<sub>0</sub>, F). Here Q is a finite set, the elements of Q are states of automaton A. &Sigma; is a finite set called actions of A. C is a finite set called the clocks of A. E is a set of edges called transitions of A. q<sub>0</sub> is an element of Q, called the initial state. An edge defined by (q,a,g,r,q') from E is a transition from state q to q' with action a, guard g and clock resets r [2], F is the set of final states. </p>
+<img src = "/assets/timed_automaton.jpg" />
+<p>&nbsp;Thanks to the references 
+  <ol>
+    <li><a href="https://www.cis.upenn.edu/~alur/TCS94.pdf"  target="_blank">A Theory of Timed Automata</a>.</li>
+    <li><a href="https://en.wikipedia.org/wiki/Timed_automaton"  target="_blank">Wiki page on Timed Automaton</a>.</li>
+  </ol>
+</p>
