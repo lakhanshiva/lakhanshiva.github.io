@@ -1,0 +1,19 @@
+---
+layout: post
+title: Differential Privacy
+permalink: /Differential-Privacy-Tensorflow
+published: true
+images:
+  - url: /assets/timed_automaton.jpg
+---
+<p> Accountability and trust are difficult to garner for a company without using data collection and processing techniques that respect an individual's privacy. With growing number of applications employing Artificial Intelligence, web and mobile applications are collecting and processing large data streams and hence the importance of data privacy is going on a steep upward path. In the wake of it's growing importance, a new line of research in theoretical computer science emerged to be known as differential privacy. <strong><i> Differential privacy </i></strong> has provided a framework for computing on sensitive datasets in which one can mathematically prove the privacy of individual-specific information.
+<p><strong> Definition </strong>: <var>M</var> : <var>𝒳<sup>n</sup></var> X <var>𝒬</var> &rarr; <var>𝒴</var> is differentially private iff &forall; q &isin; 𝒬, and &forall; x, x' &isin; 𝒳 differing only on a single row, the distributions M(x, q) and M(x', q) are similar</p>
+<p>Here, 𝒳 is the space from which we get rows, 𝒬 is the space of questions, and 𝒴 is the output space. The main idea behind the definition is that no individual's data has a significant influence on the output</p>
+<p>In addition to this, private learning is a combination of probably approximate correct learning and differential privacy. Thus, we collect labeled individual information, and output a hypothesis while preserving the privacy of each individual.</p>
+<p>Google just announced TensorFlow privacy module - thus enabling machine learning with differential privacy in their TensorFlow framework</p>
+<p>&nbsp;References:
+  <ol>
+    <li><a href="https://privacytools.seas.harvard.edu/differential-privacy"  target="_blank">Differential Privacy - Harvard's privacy tools project</a>.</li>
+    <li><a href="https://medium.com/tensorflow/introducing-tensorflow-privacy-learning-with-differential-privacy-for-training-data-b143c5e801b6"  target="_blank">TensorFlow Privacy module announcement</a>.</li>
+  </ol>
+</p>
