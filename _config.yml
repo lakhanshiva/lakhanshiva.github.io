@@ -22,9 +22,9 @@ plugins:
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: lakhan.kamireddy@colorado.edu
+  email:
   flickr:
-  github: lakhanshiva
+  github:
   linkedin: lakhanshiva
   pinterest:
   rss: # just type anything here for a working RSS icon
